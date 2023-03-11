@@ -10,19 +10,29 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav>
-        <Link href="/" legacyBehavior>
-          <a style={{ color: "" }}>메인</a>
-        </Link>
-
-        <Link href="/about" legacyBehavior>
-          <a style={{ color: "pink" }}>어바웃</a>
-        </Link>
-
-        <Link href="/contact" legacyBehavior>
-          <a style={{ color: "red" }}>연락처</a>
-        </Link>
-      </nav>
+      <header className="h-[60px] bg-[#dfdfdf]">
+        <div className="con mx-auto flex h-full w-[1200px]">
+          <nav className="menu-1 flex self-center">
+            <ul className="flex h-full">
+              <li>
+                <Link href="/" legacyBehavior>
+                  <a className="block px-4 hover:text-[#afafaf]">메인</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" legacyBehavior>
+                  <a className="block px-4 hover:text-[#afafaf]">어바웃</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" legacyBehavior>
+                  <a className="block px-4 hover:text-[#afafaf]">연락처</a>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
       <Component {...pageProps} />
     </>
   );
