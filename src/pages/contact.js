@@ -1,4 +1,6 @@
+import { AppBar, Toolbar } from "@mui/material";
 import Head from "next/head";
+import ToolbarContent from "./../components/ToolbarContent";
 
 export default function Contact() {
   return (
@@ -7,7 +9,14 @@ export default function Contact() {
         <title>연락처 | 투두</title>
       </Head>
 
-      <h1>연락처 소개 페이지</h1>
+      <AppBar position="fixed">
+        <Toolbar>
+          <ToolbarContent></ToolbarContent>
+        </Toolbar>
+      </AppBar>
+      <Toolbar />
+
+      <h1 className="mt-3">연락처 페이지</h1>
     </>
   );
 }
